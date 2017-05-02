@@ -1,13 +1,13 @@
 angular.module('extramob.controllers.vehicle', []);
  app.controller('VehicleCtrl', function($scope, $ionicConfig, $state, $timeout) {
    $scope.counter = 0;
-   $scope.stopped = false;
-   $scope.buttonText='Parar';
+   $scope.stopped = true;
+   $scope.buttonText='Iniciar Corrida';
+   var mytimeout = $timeout($scope.onTimeout,1000);
    $scope.onTimeout = function(){
        $scope.counter++;
        mytimeout = $timeout($scope.onTimeout,1000);
    }
-   var mytimeout = $timeout($scope.onTimeout,1000);
    $scope.start = function(){
        if(!$scope.stopped){
            $timeout.cancel(mytimeout);
@@ -20,7 +20,12 @@ angular.module('extramob.controllers.vehicle', []);
        }
            $scope.stopped=!$scope.stopped;
    }
+   $scope.check = function(){
+     
+   }
 });
+
+
 
 app.filter('formatTimer', function() {
 return function(input)

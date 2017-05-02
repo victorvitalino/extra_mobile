@@ -6,10 +6,12 @@
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content scroll="true" overflow-scroll="true">
-    <br/>
-    </br/>
+    <span class="clock_img ion-ios-stopwatch-outline"></span>
+    <div class="clock">
+      {{counter|formatTimer}}
+    </div>
+    <span class="clock_button" ng-click="start()">{{buttonText}}</span>
 
-{{counter|formatTimer}}
-  <button ng-click="start()">{{buttonText}}</button>
-      </ion-content>
+    <span class="clock_button" ng-if="" ng-click="start()">Finalizar minha corrida</span>
+  </ion-content>
 </ion-view>

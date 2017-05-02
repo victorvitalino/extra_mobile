@@ -7,11 +7,10 @@
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('starter', ['ionic',
  'extramob.controllers.home',
+ 'extramob.controllers.vehicle',
  'extramob.controllers.notice',
  'codhab.controllers.faq',
- 'codhab.controllers.terms',
- 'starter.controllers',
- 'starter.services'])
+ 'codhab.controllers.terms'])
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -57,6 +56,15 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
       }
     }
   })
+  .state('tab.vehicle', {
+    url: '/vehicle',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/vehicle/index.html',
+        controller: 'VehicleCtrl'
+      }
+    }
+  })
 
   .state('tab.qrcode', {
       url: '/qrcode',
@@ -76,15 +84,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
       }
     }
   })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
   .state('tab.info',{
     url: '/info',
     views: {
@@ -112,7 +111,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
       }
     }
   })
-
   .state('tab.perfil', {
     url: '/perfil',
     views: {

@@ -1,0 +1,42 @@
+<ion-view view-title="Termos de uso">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> Voltar
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content overflow-scroll="true" padding="true">
+
+
+    <ion-list>
+    </br>
+    <p class="post-post">
+      <p>Agradecemos por usar nossos produtos e serviços (“Serviços”). Os Serviços serão fornecidos pela Companhia de Desenvolvimento Habitacional do Distrito Federal (CODHAB/DF) ,
+        localizada em Setor Comercial Sul, Quadra 06, Lotes 13/14, Bloco A, 6º Andar - Edifício SEDHAB, Brasília - DF.
+      </p>
+      <p>Ao usar nossos Serviços, você está concordando com estes termos. Leia-os com atenção.
+      </p>
+      <p>Nossos Serviços são muito diversos, portanto, às vezes, podem aplicar-se termos adicionais ou exigências de produtos
+        (inclusive exigências de idade). Os termos adicionais estarão disponíveis com os Serviços relevantes e esses termos
+        adicionais se tornarão parte de nosso contrato com você, caso você use esses Serviços.
+      </p>
+        <br><strong></strong></p>
+
+          <ion-item ng-repeat="item in items" class="item item-faq item-text-wrap">
+            <div ng-click="toggleItem(item)" class="item-expand-footer">
+              <i ng-class="isItemShown(item) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
+              <b>{{item.title}}</b>
+            </div>
+            <div ng-class="isItemShown(item) ? 'item-expand active' : 'item-expand inactive'">
+              <h4 style="text-align: justify;"></strong></h4>
+              <p>{{item.text}}</p>
+            </div>
+
+          </ion-item>
+
+      </ion-list>
+
+
+
+</br>
+  </ion-content>
+</ion-view>

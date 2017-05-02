@@ -1,0 +1,205 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+
+.tabs-color-active-positive .tab-item{
+  color: #fff!important;
+}
+.tabs{
+  background-color: #353535!important;
+  height: 75px;
+  color: #fff;
+}
+.tab-qr{
+  background-color: #ffc10e!important;
+}
+.tab-nav.tabs{
+  border-top: 1px solid #ddd!important;
+}
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  border-top: 2px solid #ffc10e!important;
+  margin-top:0px!important;
+}
+.tabs-striped .tabs{
+  padding-top: 0px;
+}
+
+.tabs .tab-item .custom_qr{
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/qr.png');
+  background-size: contain;
+}
+
+
+.tabs .tab-item .icon.custom_home {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/home.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.custom_noticias {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/notice.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.custom_info {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/info.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.custom_login2 {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/login-1a.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.custom_qr {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/qr.png');
+  background-size:contain;
+}
+
+.copy-codhab{
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #808080;
+}
+
+
+.logobar{
+  width: 40%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bar-stable .bar{
+
+  height:70px!important;
+}
+
+.bar.bar-stable .title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.custom-back{
+  font-size: 30px!important;
+  margin: 10px;
+}
+
+.margin30{
+  margin-top:30px;
+}
+
+.tit-qr{
+  margin-top: 30px!important;
+
+}
+
+.btn-tit-cam {
+ text-align: center;
+}
+
+.btn-text-int {
+ color:#C0C0C0;
+}
+
+.btn-buttom-cam {
+ background-color:#289728;
+ margin: 0 auto;
+ display: block;
+ border-radius:10px;
+}
+
+.btn-camera {
+ font-size:30px;
+ float:left;
+ margin-left:15px;
+ color:white;
+
+}
+
+.btn-text-cam {
+
+ color:white;
+}
+
+.item-faq {
+  border:none;
+}
+
+.item-expand.active {
+  max-height: 1000px;
+  transition: max-height 0.3s ease-out;
+}
+
+.item-expand {
+  position: relative;
+  width: 100%;
+  max-height: 10px;
+  transition: max-height 0.1s ease-out;
+  overflow: hidden;
+
+}
+
+.item-expand.inactive:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  display: block;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(255, 255, 255, 0)),
+    color-stop(1, rgba(255, 255, 255, 1))
+  );
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}

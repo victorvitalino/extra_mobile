@@ -6,6 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('starter', ['ionic',
+ 'ngCordova',
  'extramob.controllers.home',
  'extramob.controllers.vehicle',
  'extramob.controllers.notice',
@@ -79,11 +80,20 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     url: '/notice',
     views: {
       'tab-notice': {
-        templateUrl: 'templates/tab-notice.html',
-        controller: 'NoticeCtrl'
+        templateUrl: 'templates/notices/index.html',
+        controller: 'NoticesCtrl'
       }
     }
   })
+  .state('tab.notice',{
+      url: "/notice/:id",
+      views:{
+        'tab-notices':{
+          templateUrl: "views/app/notices/single.html",
+          controller: 'NoticeCtrl'
+        }
+      }
+    })
   .state('tab.info',{
     url: '/info',
     views: {
@@ -122,6 +132,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/notice');
 
 });

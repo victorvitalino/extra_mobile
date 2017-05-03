@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.extranetmobile481390" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>extranet_mobile</name>
+<widget id="com.codhab.extramobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Extranet Mobile</name>
   <description>
-        An Ionic Framework and Cordova project.
+      Aplicativo interno CODHAB
     </description>
-  <author email="you@example.com" href="http://example.com/">
-      Your Name Here
+    <author email="vitalino.victor@gmail.com" href="http://www.codhab.df.gov.br">
+      Victor Fernandes Vitalino Coimbra
     </author>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="*"/>
+  <access launch-external="yes" origin="tel:*"/>
+  <access launch-external="yes" origin="mailto:*"/>
+  <access launch-external="yes" origin="tel:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="*"/>
+  <allow-navigation href="*"/>
+  <allow-navigation href="http://10.36.26.54:8100"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
-  <preference name="SplashScreenDelay" value="2000"/>
   <preference name="FadeSplashScreenDuration" value="2000"/>
   <preference name="android-minSdkVersion" value="16"/>
-  <preference name="BackupWebStorage" value="none"/>
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="loadUrlTimeoutValue" value="700000" />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

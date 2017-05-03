@@ -1,0 +1,16 @@
+<ion-view view-title="{{noticia.title}}">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button class="button-clear ion-ios-arrow-thin-left custom-back"></ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="padding">
+    <div class="row">
+      <img src="http://www.codhab.df.gov.br/{{noticia.thumbnail.url}}" alt="" style="width: 100%;height: 30%;" />
+    </div>
+    <h2>
+      {{noticia.title}}
+    </h2>
+    <small>{{noticia.created_at | date:"EEEE d 'de' MMMM 'de' y 'às' HH:mm"}}</small>
+    <div ng-bind-html="noticia.content"></div>
+
+  </ion-content>
+</ion-view>

@@ -1,1 +1,49 @@
-/* Empty. Add your own CSS if you like */
+
+.btn-nav-codhab button{
+	width: 100%;
+	height: 175px;
+}
+.scroll {
+    height: 100%;
+}
+.slider-slide img{
+	width: 100%;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+.posting-msg{
+	padding:20px!important;
+
+}
+
+.tab-nav.tabs{
+  border-top: 1px solid #ddd!important;
+}
+.btn-camera {
+ font-size:30px;
+ float:left;
+ margin-left:15px;
+ color:white;
+
+}
+
+.btn-text-cam {
+
+ color:white;
+}
+
+.btn-buttom-cam {
+ background-color:#289728;
+ margin: 0 auto;
+ display: block;
+ border-radius:10px;
+}
+
+.btn-tit-cam {
+ text-align: center;
+}
+.btn-text-int {
+ color:#C0C0C0;
+}

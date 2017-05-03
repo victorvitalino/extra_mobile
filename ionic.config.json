@@ -1,13 +1,12 @@
 {
-  "name": "extranet_mobile",
-  "app_id": "",
+  "name": "appcodhab",
+  "app_id": "89baea28",
   "gulpStartupTasks": [
     "sass",
     "watch"
   ],
   "watchPatterns": [
     "www/**/*",
-    "!www/lib/**/*",
-    "!www/**/*.map"
+    "!www/lib/**/*"
   ]
 }

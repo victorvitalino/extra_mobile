@@ -1,0 +1,28 @@
+.create-form {
+  .calories {
+    float: right;
+    margin-right: $content-padding;
+  }
+  .picture {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.item-card {
+  .calories {
+    float: right;
+    font-weight: bold;
+  }
+  .category {
+    color: lightgray;
+
+  }
+}
+.platform-ios.platform-cordova:not(.fullscreen) .search-bar {
+margin-top: 20px;
+}
+.back-button > .back-text > .previous-title{
+display:none;
+}

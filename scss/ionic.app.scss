@@ -3,81 +3,118 @@ To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
 
 For example, you might change some of the default colors:
+*/
+
 
 $light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
+$stable:                          #f9f9f9 !default;
 $positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
+$energized:                       #ffc10e !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
+
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,300');
+// @import url('https://fonts.googleapis.com/css?family=Lato:400,700,300');
+
+/*
+Google @fontface , espero que n de pala dnvo :s
 */
+
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Lato/Lato-Light.eot") format("embedded-opentype"),
+       url("../fonts/Lato/Lato-Light.ttf") format("truetype"),
+       url("../fonts/Lato/Lato-Light.svg#Lato") format("svg"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato/Lato-Regular.eot") format("embedded-opentype"),
+       url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
+       url("../fonts/Lato/Lato-Regular.svg#Lato") format("svg"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Lato/Lato-Bold.eot") format("embedded-opentype"),
+       url("../fonts/Lato/Lato-Bold.ttf") format("truetype"),
+       url("../fonts/Lato/Lato-Bold.svg#Lato") format("svg"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto/Roboto-Light.eot") format("embedded-opentype"),
+       url("../fonts/Roboto/Roboto-Light.ttf") format("truetype"),
+       url("../fonts/Roboto/Roboto-Light.svg#Lato") format("svg"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Regular.eot") format("embedded-opentype"),
+       url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"),
+       url("../fonts/Roboto/Roboto-Regular.svg#Lato") format("svg"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto/Roboto-Bold.eot") format("embedded-opentype"),
+       url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"),
+       url("../fonts/Roboto/Roboto-Bold.svg#Lato") format("svg"); }
+/* fim @fontface*/
+$font-family-base: 'Roboto';
+$font-family-second: 'Lato';
+$ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "www/lib/ionic/scss/ionic";
+@import "www/lib/font-awesome/scss/font-awesome";
+@import "www/scss/form.scss";
+@import "www/scss/styles.scss";
+p,.color_txt {
+  color: #444;
+}
+.tab-nav.tabs{
+  border-top: 1px solid #ddd!important;
+}
+.btn-camera {
+ font-size:30px;
+ float:left;
+ margin-left:15px;
+ color:white;
 
-.clock{
-  text-align: center;
-  font-size: 45px;
-  margin-top: 20px;
-  color:#353535;
 }
-.clock_button{
-  text-align: center;
-display: block;
-font-size: 20px;
-margin:0 auto;
-margin-top: 20px;
-width: 80%;
-background-color: rgb(255, 189, 0);
-color: #fff;
-padding: 10px 0px;
-border-radius: 2em;
+.loading{
+  background-color: rgba(240, 50, 50, 0) !important;
 }
-.clock_img{
-  margin: 60px 0 0 0;
-  text-align: center;
-  font-size: 120px;
-  display: block;
-  color: #353535;
-}
-.tabs-color-active-positive .tab-item{
-  color: #fff!important;
-}
+/*custom tabs*/
 .tabs{
   background-color: #353535!important;
   height: 75px;
   color: #fff;
 }
-.tab-qr{
-  background-color: #ffc10e!important;
-}
-.tab-nav.tabs{
-  border-top: 1px solid #ddd!important;
-}
 .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
-  border-top: 2px solid #ffc10e!important;
+  border-top: 2px solid #ffc10e;
   margin-top:0px!important;
 }
 .tabs-striped .tabs{
   padding-top: 0px;
 }
-
-.tabs .tab-item .custom_qr{
-  background-repeat: no-repeat;
-  background-position: 50%;
-  margin-top: 6px;
-  height: 45px;
-  background-image: url('../img/qr.png');
-  background-size: contain;
-}
-
-
 .tabs .tab-item .icon.custom_home {
   background-repeat: no-repeat;
   background-position: 50%;
@@ -102,13 +139,20 @@ border-radius: 2em;
   background-image: url('../img/info.png');
   background-size:contain;
 }
-
+.tabs .tab-item .icon.custom_login {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 6px;
+  height: 45px;
+  background-image: url('../img/login-2.png');
+  background-size:contain;
+}
 .tabs .tab-item .icon.custom_login2 {
   background-repeat: no-repeat;
   background-position: 50%;
   margin-top: 6px;
   height: 45px;
-  background-image: url('../img/login-1a.png');
+  background-image: url('../img/login-2a.png');
   background-size:contain;
 }
 .tabs .tab-item .icon.custom_qr {
@@ -119,84 +163,21 @@ border-radius: 2em;
   background-image: url('../img/qr.png');
   background-size:contain;
 }
-
-.copy-codhab{
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #808080;
-}
-
-
-.logobar{
-  width: 40%;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-.bar-stable .bar{
-
-  height:70px!important;
-}
-
 .bar.bar-stable .title {
   font-weight: bold;
   margin-top: 10px;
-}
 
+}
 .custom-back{
   font-size: 30px!important;
   margin: 10px;
 }
-
-.margin30{
-  margin-top:30px;
+#qr{
+  background-color: #f4b500;
 }
-
 .tit-qr{
   margin-top: 30px!important;
-
 }
-
-.btn-tit-cam {
- text-align: center;
-}
-
-.btn-text-int {
- color:#C0C0C0;
-}
-
-.btn-buttom-cam {
- background-color:#289728;
- margin: 0 auto;
- display: block;
- border-radius:10px;
-}
-
-.btn-camera {
- font-size:30px;
- float:left;
- margin-left:15px;
- color:white;
-
-}
-
-.btn-text-cam {
-
- color:white;
-}
-
-.item-faq {
-  border:none;
-}
-
-.item-expand.active {
-  max-height: 1000px;
-  transition: max-height 0.3s ease-out;
-}
-
 .item-expand {
   position: relative;
   width: 100%;
@@ -204,6 +185,11 @@ border-radius: 2em;
   transition: max-height 0.1s ease-out;
   overflow: hidden;
 
+}
+
+.title-image {
+    margin-top: 8px!important;
+    height: 27px!important;
 }
 
 .item-expand.inactive:after {
@@ -226,4 +212,374 @@ border-radius: 2em;
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.item-expand.active {
+  max-height: 1000px;
+  transition: max-height 0.3s ease-out;
+}
+.item-faq {
+  border:none;
+}
+
+item-login{
+  height: 24px!important;
+}
+.keyboard-open .tabs{ display:none; } .keyboard-open .has-tabs{ bottom:0; }
+
+
+
+/* DEMO */
+
+
+.tabs-striped .tabs{
+  background-color: none;
+}
+.tabs :nth-child(8) {
+  background-color:   #ffc10e;
+  opacity: 1;
+}
+.tabs>.tab-hidden>:nth-child(8) {
+  background-color:   #ffc10e;
+  opacity: 1;
+}
+.logintop,.notificationtop{
+    height: 40px;
+    width: 40px;
+}
+.logintop{
+  margin-top: 8px;
+}
+.notificationtop{
+  margin-top:5px;
+}
+.bar-stable .bar{
+
+  height:70px!important;
+}
+.platform-ios{
+    .scroll-res{
+    overflow-scroll:true;
+    }
+}
+.logobar{
+  width: 40%;
+height: 100%;
+display: block;
+margin: 0 auto;
+}
+// .col-33 button{
+//   background-color: #f9f9f9;
+// }
+.custom-badge{
+  top: -50px !important;
+  right: 5px !important;
+  width: 25px;
+  border-radius: 28px;
+  height: 25px;
+  padding: 5px;
+}
+.btn-text-cam {
+
+ color:white;
+}
+
+.btn-buttom-cam {
+ background-color:#289728;
+ margin: 0 auto;
+ display: block;
+ border-radius:10px;
+}
+
+.btn-tit-cam {
+ text-align: center;
+}
+.btn-text-int {
+ color:#C0C0C0;
+}
+a{text-decoration: none;}
+.destaque{
+  height: auto;
+    width: 100%;
+    display: block;
+    color:#fff;
+    text-align: center;
+    padding:5px 0;
+}
+.destaque h3{color:#fff; text-align: center;}
+.img_destaque{
+  position: relative;
+  overflow: hidden;
+}
+.img_destaque::before{
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-image: url("../img/mascara.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+label.error-formz{
+  border-color: $assertive!important;
+}
+label.no_error-formz{
+  border-color: $balanced!important;
+}
+.placeholder-right-icon{
+  margin-right: 10px;
+  font-size: 24px;
+  color:$balanced;
+}
+.startTitle{
+  padding:10px;
+}
+.start-button{
+	margin-top: 65px;
+}
+.start-color{
+	color:#a7a9ac;
+	font-weight: 100!important;
+}
+.bloco-energized{
+	background-color:#ffc10e;
+}
+.bloco-energized img{
+    display: block;
+    margin: 0 auto;
+}
+.fontsx{
+	color: #333!important;
+}
+.slider-slide img{
+	width: 100%;
+}
+
+.avatar-nome{
+	text-align: center;
+	margin-top: 40px;
+	color: #333!important;
+}
+.avatar-cargo{
+	font-size: 11px;
+}
+.avatar-info{
+	text-align: center;
+	color: #333!important;
+	font-weight: 500;
+}
+.avatar-data{
+	font-size: 10px;
+  line-height: 1.5;
+}
+.avatar-nome{
+  font-size: 22px;
+}
+.list_button{
+	font-size: 40px;
+}
+.texto_interno_search{
+	text-align: center;
+	font-size: 15px;
+	color: rgba(167,170,172,0.8);
+}
+.badge_search{
+	font-size: 12px;
+}
+.marginz{
+	margin:0px;
+}
+.logo_interna_search{
+	position:absolute;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	top:50%;
+	transform:translateY(-50%);
+}
+.avatar-coord{
+	position: absolute;
+	top: 8%;
+	margin: 0 auto;
+	right: 0;
+	width: 90px;
+	border-radius: 45px;
+	padding: 9px;
+	left: 0;
+	background-color: #fff;
+}
+.item-custom{border:none!important;}
+.fundo-single{
+	overflow: hidden;
+	height: 110px;
+}
+
+.cor-clara{
+	color:#ddd;
+}
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+.copy-codhab{
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #808080;
+}
+.blue{
+  background-color: blue;
+}
+.slider-intro h3{
+	color:#fff;
+}
+.mask-single{
+	position: absolute;
+	width: 100%;
+	height: inherit;
+	background-color: rgba(52,131,222,0.8);
+}
+.button-avatar{
+	display: block;
+	float: left;
+  width: 33.33%;
+	text-align: center;
+	color: #fff;
+	background-color: #387ef5;
+	border: none!important;
+	border-radius: 0!important;
+	font-size: 17px;
+}
+
+.button-avatar:active{
+	background-color: #000
+}
+.bloco-avatar{
+	margin: 15px 0;
+}
+.logo_interna_search img{
+		width: 100%;
+}
+.captalize{
+	text-transform: capitalize;
+}
+.margin30{
+  margin-top:30px;
+}
+.btn-nav-codhab{
+	height: 100px;
+	width: 100px;
+	// border-radius: 300px;
+	margin: 0 auto;
+	display: block;
+	// border: 2px solid #808080;
+	background-color: #fff;
+  border:none;
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.13);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.13);
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.13);
+}
+
+.btn-nav-codhab.activated{
+	background-color: #353535!important;
+	border: 2px solid #353535!important;
+}
+.btn-nav-codhab.activated>:before{
+	color:#fff!important;
+}
+.bloco-home{
+	margin-top: 0px!important;
+}
+.bloco-inicial{
+	margin-top:7%!important;
+}
+
+.btn-texto{
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+	color:#808080;
+	font-family: $font-family-second;
+	font-size: 11px;
+}
+.btn-nav-codhab span{
+  display: block;
+}
+.btn-nav-codhab :before {
+    font-size: 60px !important;
+		color:#4c4c4c;
+}
+
+.btn-nav-codhab:hover{
+  color:#fff!important;
+}
+.scroll {
+    height: 100%;
+}
+#map {
+    width: 100%;
+    height: 60%;
+}
+
+.posting-msg{
+	padding:20px!important;
+	transform: none!important;
+}
+.button-home{
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: 140px;
+  text-align: center;
+}
+.button-home a{
+  color: #818285;
+}
+.button-home a.activated{
+  color:#ffc900!important;
+}
+.icon-button-home{
+  font-size: 75px;
+  margin-top: 18px;
+}
+.home-points p{
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #818285;
+}
+.badge_indication{
+  width: 100%;
+  display: block;
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px;
+}
+.badge_indication strong{
+  text-transform: uppercase!important;
+}
+.indication-balanced{
+  background-color: $balanced;
+}
+.indication-energized{
+  background-color: $energized;
+}
+.btn-evidence :before{
+  color:#ffc10e!important;
 }

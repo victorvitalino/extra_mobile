@@ -7,7 +7,9 @@ app.controller('ScanCtrl', function ($scope,$cordovaBarcodeScanner,$cordovaInApp
 
     cordova.plugins.barcodeScanner.scan(
          function (result) {
-            $cordovaInAppBrowser.open(result.text,'_self');
+            // $cordovaInAppBrowser.open(result.text,'_self');
+            $scope.mat = result.text;
+            window.localStorage['matricula'] = result.text;
          },
          function (error) {
              alert("Scanning failed: " + error);

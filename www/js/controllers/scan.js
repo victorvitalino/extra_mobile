@@ -7,9 +7,29 @@ app.controller('ScanCtrl', function ($scope,$cordovaBarcodeScanner,$cordovaInApp
 
     cordova.plugins.barcodeScanner.scan(
          function (result) {
-            // $cordovaInAppBrowser.open(result.text,'_self');
+
             $scope.mat = result.text;
-            window.localStorage['matricula'] = result.text;
+            // window.localStorage['matricula'] = result.text;
+            $http.get("http://mobile.codhab.df.gov.br/authenticate/?code="+$scope.mat)
+             .success(function (data, status, headers, config){
+                console.log(data)
+                for (var k in data){
+                  if (k == 'data'){
+                    var y = data[k];
+                    if(y.message == 'success'){
+                      window.localStorage['matricula'] = $scope.mat;
+                      window.location.reload();
+                      $state.go('tabs.noticias');
+                    }else{
+                      alert("QRcode Inválido.")
+                    }
+                  }
+                }
+
+             }).error(function(data, status, headers, config){
+               alert("Você está sem conexão, ou ela está lenta, tente mais tarde.")
+             }).then(function(result){
+             });
          },
          function (error) {
              alert("Scanning failed: " + error);

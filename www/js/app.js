@@ -14,6 +14,7 @@ var app = angular.module('codhab', ['ionic',
 'codhab.controllers.scan',
 'codhab.controllers.tabs',
 'codhab.controllers.faq',
+'codhab.controllers.extranet',
 'codhab.controllers.terms'
 ])
 
@@ -143,6 +144,15 @@ $ionicConfigProvider.backButton.text('');
         'tabs-scan':{
           templateUrl: "views/app/scan/index.html",
           controller: 'ScanCtrl'
+        }
+      }
+    })
+    .state('tabs.extranet',{
+      url: "/extranet",
+      views:{
+        'tabs-extranet':{
+          templateUrl: "views/app/arearestrita/index.html",
+          controller: 'ExtraCtrl'
         }
       }
     })

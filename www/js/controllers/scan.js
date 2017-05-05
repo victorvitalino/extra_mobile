@@ -41,4 +41,7 @@ app.controller('ScanCtrl', function ($scope,$cordovaBarcodeScanner,$cordovaInApp
       );
 
     };
+
+
+
 });

@@ -6,22 +6,17 @@
             scroll="false"
               ng-controller="LoginCtrl" class="margin30">
 <!-- Form with floating labels -->
-<a ng-if="check_entidade()" ui-sref="tabs.entidades_login">Logar como entidade?</a>
-<a ng-if="!check_entidade()" ui-sref="tabs.entidades_area_restrita">Área da entidade?</a>
 <form ng-submit="getData()" novalidate="novalidate" name="loginForm">
 <ion-list>
-<label class="item item-input item-floating-label item-login" ng-class="{'has-error':loginForm.cpf.$invalid}">
-<span class="input-label">CPF</span>
+<label class="item item-input item-floating-label item-login">
+<span class="input-label">Matricula</span>
 <input type="text"
-      placeholder="CPF"
-      ng-model="formData.cpf"
+      placeholder="Matricula"
+      ng-model="formData.matricula"
                 ng-required="true"
-                name="cpf"
+                name="matricula"
                 >
 </label>
-       	<div class="form-errors" ng-messages="loginForm.cpf.$error">
-                 <div ng-messages-include="views/errors/form-errors.html"></div>
-       	</div>
 
       <br/>
 <label class="item item-input item-floating-label item-login" ng-class="{'has-error':loginForm.password.$invalid}">
@@ -41,10 +36,6 @@
 <button class="button button-energized button-block"
        type="submit"style="color:#000; font-weight:bold;" >Realizar Acesso
 </button>
-     <button class="button button-stable button-block" ui-sref="tabs.senha" type="submit" style="color:#000; font-weight:bold;">Recuperar senha
-     </button>
-     <button class="button button-stable button-block" ui-sref="tabs.senha" type="submit" style="color:#000; font-weight:bold;">Primeiro Acesso
-     </button>
 </form>
 
 

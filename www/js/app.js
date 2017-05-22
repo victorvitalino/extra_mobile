@@ -11,6 +11,7 @@ var app = angular.module('codhab', ['ionic',
 'angularMoment',
 'codhab.controllers.app',
 'codhab.controllers.noticias',
+'codhab.controllers.login',
 'codhab.controllers.scan',
 'codhab.controllers.tabs',
 'codhab.controllers.faq',
@@ -144,6 +145,15 @@ $ionicConfigProvider.backButton.text('');
         'tabs-scan':{
           templateUrl: "views/app/scan/index.html",
           controller: 'ScanCtrl'
+        }
+      }
+    })
+    .state('tabs.login',{
+      url: "/login",
+      views:{
+        'tabs-login':{
+          templateUrl: "views/login/login.html",
+          controller: 'LoginCtrl'
         }
       }
     })

@@ -1,5 +1,6 @@
 // Ionic Starter App
-
+// Database instance.
+var db = null;
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
@@ -14,12 +15,15 @@ var app = angular.module('codhab', ['ionic',
 'codhab.controllers.login',
 'codhab.controllers.scan',
 'codhab.controllers.tabs',
+'codhab.controllers.voi',
+'codhab.controllers.singlevoi',
+'codhab.controllers.formvoi',
 'codhab.controllers.faq',
 'codhab.controllers.extranet',
 'codhab.controllers.terms'
 ])
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform, $cordovaSQLite) {
   $ionicPlatform.ready(function() {
 
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -70,6 +74,8 @@ app.run(function($ionicPlatform) {
         console.log("oi"+ window.localStorage['UserId']);
         console.log('getIds: ' + JSON.stringify(ids));
     });
+    // db = $cordovaSQLite.openDB({name: "extramobile.db", location:"default"});
+    // $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS pessoas (id INTEGER PRIMARY KEY, firstname text, lastname text)");
   });
 });
 
@@ -90,6 +96,33 @@ $ionicConfigProvider.backButton.text('');
         'tabs-home':{
           templateUrl: "views/app/home.html",
           controller: 'AppCtrl'
+        }
+      }
+    })
+    .state('tabs.voi', {
+      url: "/voi",
+      views:{
+        'tabs-voi':{
+          templateUrl: "views/app/voi/index.html",
+          controller: 'VoiCtrl'
+        }
+      }
+    })
+    .state('tabs.singlevoi', {
+      url: "/voi/:id",
+      views:{
+        'tabs-voi':{
+          templateUrl: "views/app/voi/single.html",
+          controller: 'SingleVoiCtrl'
+        }
+      }
+    })
+    .state('tabs.formvoi', {
+      url: "/voi/form",
+      views:{
+        'tabs-voi':{
+          templateUrl: "views/app/voi/form.html",
+          controller: 'FormVoiCtrl'
         }
       }
     })

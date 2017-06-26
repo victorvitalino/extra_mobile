@@ -1,0 +1,18 @@
+<ion-view>
+  <ion-nav-buttons class="bar bar-header homereader">
+    <div class="h1 title">VOI</div>
+  	<button class="button button-icon ion-ios-compose-outline" ui-sref="tabs.formvoi"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding" scroll='true'>
+      <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <button class="button" ng-click="insert('victor','vitalino')">insert</button>
+    <!-- <button class="button" ng-click="select('vitalino')">select</button> -->
+    <ion-list>
+      <ion-item ng-repeat="result in all" href="#/app/voi/{{result.id}}">
+        <h3>{{result.id}} {{result.firstname}}</h3>
+        <p>{{result.lastname}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

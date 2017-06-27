@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="100000" id="com.codhab.extramobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="102000" id="com.codhab.extramobile" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>EXTRANET CODHAB</name>
     <description>
     Aplicativo da interno CODHAB
@@ -81,6 +81,7 @@
     </platform>
     <icon src="resources/ios/icon/icon-small@3x.png" />
     <engine name="android" spec="^6.2.3" />
+    <plugin name="com.danielsogl.cordova.clipboard" />
     <plugin name="cordova-plugin-actionsheet" spec="^2.3.3" />
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
     <plugin name="cordova-plugin-compat" spec="^1.1.0" />

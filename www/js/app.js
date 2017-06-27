@@ -205,6 +205,6 @@ $ionicConfigProvider.backButton.text('');
    // $ionicConfigProvider.tabs.position('bottom')
 	// if none of the above states are matched, use this as the fallback
 
-	   $urlRouterProvider.otherwise('/app/noticias');
+	   $urlRouterProvider.otherwise('/app/info');
 
 });

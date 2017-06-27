@@ -14,5 +14,5 @@ app.controller('ExtraCtrl', function ($scope,$ionicPlatform, $ionicConfig, $stat
   }, function (err){
 
   });
-
+var clipboard = new Clipboard('.clipboard');
 });
